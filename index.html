@@ -1,0 +1,150 @@
+<!doctype html>
+  <html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ggplot2逆引き</title>
+    <!-- Material Design Lite -->
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+<!-- Square card -->
+<style>
+  .demo-card-square.mdl-card {
+    height: 320px;
+  }
+  .demo-card-square > .mdl-card__title {
+    color: #fff;
+    background: #4db6ac;
+  }
+  .mdl-layout__header {
+    background-color: #00897b
+  }
+  .mdl-navigation__link i {
+    font-size: 2em;
+  }
+  .mdl-layout-title {
+    font-weight: 700;
+    font-size: 2em;
+  }
+</style>
+
+<div class="mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">ggplot2逆引き</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="fixed-header-drawer-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample"
+                     id="fixed-header-drawer-exp" />
+            </div>
+          </div>
+        </div>
+      </header>
+  <main class="mdl-layout__content">
+<div class="demo-grid-ruler mdl-grid">
+  <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp demo-card-square">
+    <div class="mdl-card__title mdl-card--expand">
+      <h2 class="mdl-card__title-text">ggplot2 で geom_text() を使って集合棒グラフにラベルを付けたい #rstatsj</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenan convallis.
+    </div>
+  </div>
+  
+  <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp demo-card-square">
+    <div class="mdl-card__title mdl-card--expand">
+      <h2 class="mdl-card__title-text">ggplot2 で軸ラベルを縦方向に回転</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenan convallis.
+    </div>
+  </div>
+  
+  <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp demo-card-square">
+    <div class="mdl-card__title mdl-card--expand" style="background-color: rgb(240, 98, 146);">
+      <h2 class="mdl-card__title-text">ggplot2 でベースラインから上下に伸びる棒グラフ #rstatsj</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenan convallis.
+    </div>
+  </div>
+  
+  <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp demo-card-square">
+    <div class="mdl-card__title mdl-card--expand" style="background-color: rgb(255, 138, 101);">
+      <h2 class="mdl-card__title-text">ggplot2でbarの間にスペースを追加する</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenan convallis.
+    </div>
+  </div>
+  
+  <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp demo-card-square">
+    <div class="mdl-card__title mdl-card--expand" style="background-color: rgb(255, 138, 101);">
+      <h2 class="mdl-card__title-text">legendやfacet_*のラベルの表示を変えたい</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenan convallis.
+    </div>
+  </div>
+  
+  <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp demo-card-square">
+    <div class="mdl-card__title mdl-card--expand">
+      <h2 class="mdl-card__title-text">ggplot2 で qplot() と ggplot() のどちらを選びますか？ #rstatsj</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenan convallis.
+    </div>
+  </div>
+  
+  <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp demo-card-square">
+    <div class="mdl-card__title mdl-card--expand">
+      <h2 class="mdl-card__title-text">ggplot2で帯グラフを作る</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenan convallis.
+    </div>
+  </div>
+  
+  <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp demo-card-square">
+    <div class="mdl-card__title mdl-card--expand">
+      <h2 class="mdl-card__title-text">ggplot2で縦軸と横軸をひっくり返したい</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenan convallis.
+    </div>
+  </div>
+  
+  <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp demo-card-square">
+    <div class="mdl-card__title mdl-card--expand">
+      <h2 class="mdl-card__title-text">x軸を並べ替えたい</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenan convallis.
+    </div>
+  </div>
+</div>
+  </main>
+</div>
+  </body>
+</html>
