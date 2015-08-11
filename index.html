@@ -19,36 +19,25 @@
   <body>
 
 <div class="mdl-layout mdl-js-layout">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">ggplot2逆引き</span>
-          <div class="mdl-layout-spacer"></div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                      mdl-textfield--floating-label mdl-textfield--align-right">
-            <label class="mdl-button mdl-js-button mdl-button--icon"
-                   for="fixed-header-drawer-exp">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" name="sample"
-                     id="fixed-header-drawer-exp" />
-            </div>
-          </div>
-        </div>
-      </header>
-  <main class="mdl-layout__content">
-    <div class="demo-grid-ruler mdl-grid">
-      <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title mdl-card--expand red"><a href="http://qiita.com/hoxo_m/items/267ce2ab0acc319599ff" target="_blank">ggplot2 で geom_text() を使って集合棒グラフにラベルを付けたい #rstatsj</a></div>
-        <div class="mdl-card__actions">
-          <div class="carousel">
-              <div><img src="https://qiita-image-store.s3.amazonaws.com/0/2570/bc26cbdb-ccf8-0815-8b8f-d30e3eeaeb44.png"></div>
-              <div><img src="https://qiita-image-store.s3.amazonaws.com/0/2570/f5f61adf-8960-b3d8-f66b-0014eb2387d6.png"></div>
-              <div><img src="https://qiita-image-store.s3.amazonaws.com/0/2570/14d66693-9948-69d1-4c01-a56b6a649ba8.png"></div>
-              <div><img src="https://qiita-image-store.s3.amazonaws.com/0/2570/5864f736-4073-d4fc-90f5-8f9307ab8e45.png"></div>
-        </div>
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+    <span class="mdl-layout-title">ggplot2逆引き</span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="fixed-header-drawer-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="fixed-header-drawer-exp" />
         </div>
       </div>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="mdl-grid">
     </div>
   </main>
 </div>
@@ -56,15 +45,58 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="owl-carousel/owl.carousel.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function(){
-      $('.carousel').owlCarousel({
+function createCard(title, url, images) {
+  var elem_card = document.createElement("div");
+  elem_card.className = "mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp";
+  
+  var elem_title = document.createElement("div");
+  elem_title.className = "mdl-card__title color" + (Math.floor(Math.random() * 16 + 1)).toString();
+  var elem_titlelink = document.createElement("a");
+  elem_titlelink.setAttribute("href", url);
+  elem_titlelink.setAttribute("target", "_blank");
+  elem_titlelink.text = title;
+  elem_title.appendChild(elem_titlelink);
+  elem_card.appendChild(elem_title);
+  
+  var elem_action = document.createElement("div");
+  elem_action.className = "mdl-card__actions";
+  
+  var elem_carousel = document.createElement("div");
+  elem_carousel.className = "carousel";
+  
+  for (var i = 0; i < images.length; i++) {
+    var e = document.createElement("img");
+    e.setAttribute("src", images[i]);
+    elem_carousel.appendChild(e);
+  };
+  
+  elem_action.appendChild(elem_carousel);
+  elem_card.appendChild(elem_action);
+  
+  $('div.mdl-grid').append(elem_card);
+  $(elem_carousel).owlCarousel({
         navigation : false, // Show next and prev buttons
         autoPlay: true,
         slideSpeed : 300,
         paginationSpeed : 400,
         singleItem:true
       });
-    });
+  };
+
+    $(document).ready(function(){
+      $.ajax({
+        type: 'GET',
+        url: './qiita.json',
+        scriptCharset: 'utf-8',
+        dataType:'json',
+        cache: false,
+        success: function(json){
+          for(var i =0; i < json.length; i++) {
+            createCard(json[i].title, json[i].url, json[i].images);
+          }
+        }
+      });
+});
 </script>
 </body>
 </html>
