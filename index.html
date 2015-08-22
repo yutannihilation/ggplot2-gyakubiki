@@ -51,8 +51,9 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="owl-carousel/owl.carousel.min.js"></script>
 <script type="text/javascript">
-function createCard(title, url, images) {
+function createCard(title, url, id, images) {
   var elem_card = document.createElement("div");
+  elem_card.id = id;
   elem_card.className = "mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp";
   
   var elem_title = document.createElement("div");
@@ -98,7 +99,7 @@ function createCard(title, url, images) {
         cache: false,
         success: function(json){
           for(var i =0; i < json.length; i++) {
-            createCard(json[i].title, json[i].url, json[i].images);
+            createCard(json[i].title, json[i].url, json[i].id, json[i].images);
           }
         }
       });
