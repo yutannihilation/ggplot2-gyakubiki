@@ -7,26 +7,19 @@ q <- Qiita$new(readLines(file("token"), n = 1))
 
 l <- q$get_item(tag_id = "ggplot2逆引き")
 
-create_thumbnail_dir <- function(item_id) {
-  
-}
-
 create_thumbnail <- function(item_id, images) {
   thumbdir <- file.path("thumbnails", item_id)
   dir.create(thumbdir, showWarnings = FALSE)
-  for (image in images) {
-    shell(sprintf('curl -k "%s" | convert - -resize 320x320 "%s/%s"', image, thumbdir, basename(image)))
-  }
+#  for (image in images) {
+#    shell(sprintf('curl -k "%s" | convert - -resize 320x320 "%s/%s"', image, thumbdir, basename(image)))
+#  }
   
   list.files(thumbdir, full.names = TRUE)
 }
 
-l %>>%
-  list.map(~ list(id = id,
-                  images = unlist(stringr::str_extract_all(.$body, 'https://qiita-image-store.*.(png|gif)')))) %>>%
-  str
+f <- file("qiita.json", "w", encoding = "UTF-8")
 
-l[1] %>>%
+l %>>%
   list.map(~ list(url = jsonlite::unbox(.$url), title = jsonlite::unbox(.$title),
                   images = create_thumbnail(
                     item_id = .$id,
@@ -36,4 +29,7 @@ l[1] %>>%
                   )
            )) %>>%
   jsonlite::toJSON(pretty = TRUE) %>>%
-  cat(file = "qiita.json")
+  writeLines(f)
+
+close(f)
+
