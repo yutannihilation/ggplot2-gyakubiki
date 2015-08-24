@@ -45,13 +45,40 @@ function loadCards(){
 	dataType:'json',
 	cache: false,
 	success: function(json){
-		  for(var i =0; i < json.length; i++) {
+		  for(var i = 0; i < json.length; i++) {
 		    createCard(json[i].title, json[i].url, json[i].id, json[i].images);
 		  }
 	  }
 	});
 }
 
+function searchCards(query){
+  $('.mdl-card').hide();
+  
+  $.ajax({
+    type: 'GET',
+    url: 'https://qiita.com/api/v1/search?q=' + query + ' tag:ggplot2逆引き',
+    scriptCharset: 'utf-8',
+    dataType:'json',
+    cache: true,
+    success: function(json) { 
+      for(var i = 0; i < json.length; i++) {
+		    $('#' + json[i].uuid).show();
+		  }
+    }
+  });
+}
+
 $(document).ready(function(){
 	loadCards();
+	
+	$('#search-button').click(function(event) { $('#search-form').submit(); });
+	
+	$('#search-form').submit(function(event) {
+	  var query = $('#search-input').val();
+	  if(query.length > 0){
+	    searchCards(query);
+	  }
+    event.preventDefault();
+  });
 });
