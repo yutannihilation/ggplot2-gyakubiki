@@ -72,7 +72,7 @@ function searchCards(query){
 $(document).ready(function(){
 	loadCards();
 	
-	$('#search-button').click(function(event) { $('#search-form').submit(); });
+	//$('#search-button').click(function(event) { $('#search-form').submit(); });
 	
 	$('#search-form').submit(function(event) {
 	  var query = $('#search-input').val();
