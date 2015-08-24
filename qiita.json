@@ -1,5 +1,17 @@
 [
   {
+    "url": "http://qiita.com/berobero11/items/13d034ab0ed60b4dca88",
+    "title": "データのhistogramと確率密度関数を同時に描きたい",
+    "id": "13d034ab0ed60b4dca88",
+    "images": ["thumbnails/13d034ab0ed60b4dca88/a35b02bf-ee17-6a0e-147c-0f143a56e504.png", "thumbnails/13d034ab0ed60b4dca88/b3919fcd-288c-0807-2a5e-d5232620f6bd.png"]
+  },
+  {
+    "url": "http://qiita.com/berobero11/items/3efd5df3ffc44918df18",
+    "title": "確率密度関数を線で描いて95%区間を塗りつぶしたい",
+    "id": "3efd5df3ffc44918df18",
+    "images": ["thumbnails/3efd5df3ffc44918df18/690a76af-526d-924a-c0e0-77fa22ad09e3.png", "thumbnails/3efd5df3ffc44918df18/adac470c-fca2-e014-c0bd-3fa312bda66c.png"]
+  },
+  {
     "url": "http://qiita.com/berobero11/items/169d63071a54d7f64d0a",
     "title": "確率密度関数の曲線の下は塗らずに線だけ描きたい",
     "id": "169d63071a54d7f64d0a",
