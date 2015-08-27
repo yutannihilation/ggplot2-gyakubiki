@@ -8,7 +8,7 @@ function createCard(title, url, id, images) {
 	var elem_titlelink = document.createElement("a");
 	elem_titlelink.setAttribute("href", url);
 	elem_titlelink.setAttribute("target", "_blank");
-	elem_titlelink.text = title;
+	elem_titlelink.textContent = title;
 	elem_title.appendChild(elem_titlelink);
 	elem_card.appendChild(elem_title);
 	
