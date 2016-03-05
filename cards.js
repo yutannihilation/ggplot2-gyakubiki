@@ -80,5 +80,6 @@ $(document).ready(function(){
 	    searchCards(query);
 	  }
     event.preventDefault();
+    window.location.search = 'q=' + query;
   });
 });

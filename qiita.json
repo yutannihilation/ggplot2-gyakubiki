@@ -1,5 +1,17 @@
 [
   {
+    "url": "http://qiita.com/penpengusa/items/0382ae9055838b05ad9b",
+    "title": "散布図と周辺分布をあわせて描きたい (scatterplot with marginal distributions)",
+    "id": "0382ae9055838b05ad9b",
+    "images": ["thumbnails/0382ae9055838b05ad9b/36e6320c-d0f8-23bc-ac6f-a248feee4495.png", "thumbnails/0382ae9055838b05ad9b/76a386f1-bef6-4bc9-fbcd-df1ba22530e7.png", "thumbnails/0382ae9055838b05ad9b/b9e3fb95-a413-edf9-8d67-663885682e49.png"]
+  },
+  {
+    "url": "http://qiita.com/yutannihilation/items/b4130186e1e095719dcb",
+    "title": "ggplot2で点や線の色のマッピングを自分で決める",
+    "id": "b4130186e1e095719dcb",
+    "images": ["thumbnails/b4130186e1e095719dcb/14281c1d-814a-f2ec-08c2-2ebeabb06924.png", "thumbnails/b4130186e1e095719dcb/6b9337d9-7653-baff-d273-cf1bc9424f2c.png", "thumbnails/b4130186e1e095719dcb/7f73b7c9-b199-3713-b43e-dd8d3dc91c3d.png"]
+  },
+  {
     "url": "http://qiita.com/kazutan/items/5cf22e072994ecc0bbb2",
     "title": "ggplotで数値軸の下限値(or上限値)だけを指定したい",
     "id": "5cf22e072994ecc0bbb2",
@@ -30,31 +42,31 @@
     "images": ["thumbnails/ad0d738014d1d3102cee/3d8a2053-8458-42a3-c300-fa128635aef6.png"]
   },
   {
-    "url": "http://qiita.com/berobero11/items/13d034ab0ed60b4dca88",
+    "url": "http://qiita.com/penpengusa/items/13d034ab0ed60b4dca88",
     "title": "データのhistogramと確率密度関数を同時に描きたい",
     "id": "13d034ab0ed60b4dca88",
     "images": ["thumbnails/13d034ab0ed60b4dca88/a35b02bf-ee17-6a0e-147c-0f143a56e504.png", "thumbnails/13d034ab0ed60b4dca88/b3919fcd-288c-0807-2a5e-d5232620f6bd.png"]
   },
   {
-    "url": "http://qiita.com/berobero11/items/3efd5df3ffc44918df18",
+    "url": "http://qiita.com/penpengusa/items/3efd5df3ffc44918df18",
     "title": "確率密度関数を線で描いて95%区間を塗りつぶしたい",
     "id": "3efd5df3ffc44918df18",
     "images": ["thumbnails/3efd5df3ffc44918df18/690a76af-526d-924a-c0e0-77fa22ad09e3.png", "thumbnails/3efd5df3ffc44918df18/adac470c-fca2-e014-c0bd-3fa312bda66c.png"]
   },
   {
-    "url": "http://qiita.com/berobero11/items/169d63071a54d7f64d0a",
+    "url": "http://qiita.com/penpengusa/items/169d63071a54d7f64d0a",
     "title": "確率密度関数の曲線の下は塗らずに線だけ描きたい",
     "id": "169d63071a54d7f64d0a",
     "images": ["thumbnails/169d63071a54d7f64d0a/36889c63-9981-ff0a-2968-90eebb9123fd.png", "thumbnails/169d63071a54d7f64d0a/c625a5d4-8dbf-f039-7f13-c00ae3054c83.png"]
   },
   {
-    "url": "http://qiita.com/berobero11/items/1d38fdc6c8acea8e0614",
+    "url": "http://qiita.com/penpengusa/items/1d38fdc6c8acea8e0614",
     "title": "aesの中でローカル変数を使いたい",
     "id": "1d38fdc6c8acea8e0614",
     "images": []
   },
   {
-    "url": "http://qiita.com/berobero11/items/680ba37908166557f5b5",
+    "url": "http://qiita.com/penpengusa/items/680ba37908166557f5b5",
     "title": "geom_densityで端が切れるのをやめさせたい",
     "id": "680ba37908166557f5b5",
     "images": ["thumbnails/680ba37908166557f5b5/11dbaf1c-3176-29fb-cc66-f7a8b0854dc8.png", "thumbnails/680ba37908166557f5b5/44f014a2-d8b8-6818-b83b-24a3fb479030.png", "thumbnails/680ba37908166557f5b5/ded94282-22a3-dd4b-7110-db48cdf1744e.png"]
@@ -90,7 +102,7 @@
     "images": ["thumbnails/bb69515424e1563d0e22/2803db18-d9cc-7744-59dd-122db8c5cbe3.png", "thumbnails/bb69515424e1563d0e22/9fc0bf4b-1f15-be5f-b0e6-e8a73d748d9f.png", "thumbnails/bb69515424e1563d0e22/a58d8eef-ea89-a583-1cdf-a11a14b967ff.png", "thumbnails/bb69515424e1563d0e22/e781a632-ce15-9d59-b5d8-ab8893b9b172.png", "thumbnails/bb69515424e1563d0e22/f519a3cb-1650-f8e5-f617-7622fd090c06.png"]
   },
   {
-    "url": "http://qiita.com/berobero11/items/8ad3e9c688b8515bb906",
+    "url": "http://qiita.com/penpengusa/items/8ad3e9c688b8515bb906",
     "title": "legendやfacet_*のラベルの表示を変えたい",
     "id": "8ad3e9c688b8515bb906",
     "images": ["thumbnails/8ad3e9c688b8515bb906/1067af2d-ab0d-3286-36a3-0ea40d49d9bc.png", "thumbnails/8ad3e9c688b8515bb906/541187a8-cb4b-cab4-f3dc-b6518415fa78.png"]
@@ -126,19 +138,19 @@
     "images": ["thumbnails/fd958c781d8bebd8b8b8/27b54318-6c43-ca04-2680-f360ab4bbff8.png", "thumbnails/fd958c781d8bebd8b8b8/55eff607-cbe9-87e2-7fcb-0b81b66db917.png", "thumbnails/fd958c781d8bebd8b8b8/5d8ec97e-947e-8885-be28-540d0c85f389.png", "thumbnails/fd958c781d8bebd8b8b8/6bda0d13-48cd-1a84-9902-a6bf1305d14b.png", "thumbnails/fd958c781d8bebd8b8b8/c9587ce5-1253-cf18-0b96-b2d183f3c295.png", "thumbnails/fd958c781d8bebd8b8b8/d557aa2f-522d-4974-5ee9-7df527024a75.png", "thumbnails/fd958c781d8bebd8b8b8/d5f861d8-6c36-1eda-6acf-9dc1d39f17f3.png", "thumbnails/fd958c781d8bebd8b8b8/e2a920d3-316f-24da-f795-d35261d13361.png", "thumbnails/fd958c781d8bebd8b8b8/f4485177-e2ed-e086-1843-017693f728f1.png"]
   },
   {
-    "url": "http://qiita.com/berobero11/items/dee173124fa9c894052f",
+    "url": "http://qiita.com/penpengusa/items/dee173124fa9c894052f",
     "title": "最尤推定であてはめて正規分布を描く",
     "id": "dee173124fa9c894052f",
     "images": ["thumbnails/dee173124fa9c894052f/bf7f0479-7203-29f3-4d0c-ec35aa83ac50.png"]
   },
   {
-    "url": "http://qiita.com/berobero11/items/a6522a6e6561f8ca7b96",
+    "url": "http://qiita.com/penpengusa/items/a6522a6e6561f8ca7b96",
     "title": "正規分布など好きな関数の曲線を描きたい",
     "id": "a6522a6e6561f8ca7b96",
     "images": ["thumbnails/a6522a6e6561f8ca7b96/3405f81f-881c-5bab-3dcc-f74ac9373570.png", "thumbnails/a6522a6e6561f8ca7b96/a7896f88-fcbf-d2e3-7bdd-ac2c74d4cb0e.png", "thumbnails/a6522a6e6561f8ca7b96/b4f1875a-0b44-e13f-afa1-5acc8f75c812.png", "thumbnails/a6522a6e6561f8ca7b96/c6c74bbf-f459-d0ac-576e-cf53cfacb3ca.png"]
   },
   {
-    "url": "http://qiita.com/berobero11/items/c569da6dbf568032e04a",
+    "url": "http://qiita.com/penpengusa/items/c569da6dbf568032e04a",
     "title": "ggplot2のデフォルトの色を知りたい",
     "id": "c569da6dbf568032e04a",
     "images": ["thumbnails/c569da6dbf568032e04a/18f01181-0588-3e2a-b191-34733480edad.png", "thumbnails/c569da6dbf568032e04a/5ab1da44-5ce1-b969-0440-706e5ac14cce.png"]
@@ -150,7 +162,7 @@
     "images": ["thumbnails/28dbdee1d70b184b862c/108f94cd-10db-dd6d-04d5-d8d1c58e24bd.png", "thumbnails/28dbdee1d70b184b862c/479c53c3-af0d-dd22-22bc-0cd975a077ee.png", "thumbnails/28dbdee1d70b184b862c/71ed5b6b-f347-f854-0005-cac60ba4ba30.png", "thumbnails/28dbdee1d70b184b862c/dd2bf5d2-250d-db7f-0af9-6d59497c63fd.png", "thumbnails/28dbdee1d70b184b862c/f20ab9e6-8412-d788-e14e-7e1a1140ff5a.png", "thumbnails/28dbdee1d70b184b862c/f646a265-ab16-0ef0-750e-8d822a16c09c.png"]
   },
   {
-    "url": "http://qiita.com/berobero11/items/22bd91447b4fe68cb3df",
+    "url": "http://qiita.com/penpengusa/items/22bd91447b4fe68cb3df",
     "title": "複数のhistogramを重ねて描きたい",
     "id": "22bd91447b4fe68cb3df",
     "images": ["thumbnails/22bd91447b4fe68cb3df/3417c464-f6fb-f283-2b54-1030647a3c82.png", "thumbnails/22bd91447b4fe68cb3df/a3130e1c-f0f4-720b-43d5-dd3bce565d49.png"]
