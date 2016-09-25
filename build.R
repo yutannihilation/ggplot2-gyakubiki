@@ -2,19 +2,22 @@ library(qiitr)
 library(rlist)
 library(pipeR)
 library(stringr)
+library(magick)
 
 q <- Qiita$new(readLines(file("token"), n = 1))
 
 l <- q$get_item(tag_id = "ggplot2逆引き")
 
-create_thumbnail <- function(item_id, images) {
+create_thumbnail <- function(item_id, image_urls) {
   thumbdir <- file.path("thumbnails", item_id)
   dir.create(thumbdir, showWarnings = FALSE)
-  for (image in images) {
-    thumbfile <- file.path(thumbdir, basename(image))
+  for (image_url in image_urls) {
+    thumbfile <- file.path(thumbdir, basename(image_url))
     
     if (!file.exists(thumbfile)) {
-      shell(sprintf('curl -k "%s" | convert - -resize 320x320 "%s"', image, thumbfile))
+      image_read(image_url) %>%
+        image_scale("320x320") %>%
+        image_write(thumbfile)
     }
   }
   
@@ -29,7 +32,7 @@ l %>>%
                   id = jsonlite::unbox(.$id),
                   images = create_thumbnail(
                     item_id = .$id,
-                    images = unlist(
+                    image_urls = unlist(
                       str_extract_all(.$body, 'https://qiita-image-store.*.(png|gif)')
                     )
                   )
