@@ -4,9 +4,7 @@ library(pipeR)
 library(stringr)
 library(magick)
 
-q <- Qiita$new(readLines(file("token"), n = 1))
-
-l <- q$get_item(tag_id = "ggplot2逆引き")
+l <- qiita_get_items(tag_id = "ggplot2逆引き")
 
 create_thumbnail <- function(item_id, image_urls) {
   thumbdir <- file.path("thumbnails", item_id)
